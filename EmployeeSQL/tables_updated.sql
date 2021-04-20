@@ -72,8 +72,9 @@ DROP TABLE titles;
 
 CREATE TABLE titles (
 	title_id VARCHAR(30) NOT NULL,
-	title VARCHAR(30) NOT NULL
-	FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
+	title VARCHAR(30) NOT NULL,
+	PRIMARY KEY (title_id),
+	FOREIGN KEY (title_id) REFERENCES employees(emp_title_id)
 );
 
 SELECT * FROM titles
